@@ -22,11 +22,11 @@ create_table<-  function(L,A,K)
 
   data <- data %>% mutate(TR=MP*4)
   data<- data %>% mutate(int=case_when(
-    TM > 56~"Profit",
-    round(TM,0) == 56 ~"Balance",
+    TR > 56~"Profit",
+    round(TR,0) == 56 ~"Balance",
     TRUE~"Loss"
   ))
-  table1<-data %>% select(L,TP,MP,AP,TM)
+  table1<-data %>% select(L,TP,MP,AP,TR)
 
 
   return(table1)
