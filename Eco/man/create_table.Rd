@@ -4,7 +4,7 @@
 \alias{create_table}
 \title{it apply
 L vector of labour unit
-A 
+A
 K fixed capital}
 \usage{
 create_table(L, A, K)
@@ -12,6 +12,6 @@ create_table(L, A, K)
 \description{
 it apply
 L vector of labour unit
-A 
+A
 K fixed capital
 }
