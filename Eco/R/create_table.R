@@ -4,13 +4,13 @@
 #' K fixed capital
 #' @export
 
+library(dplyr)
 
-
-l_table<-  function(L,A,K,unit_cost=4)
+l_K_table<-  function(L,A,K,unit_cost=4)
   {
 
 
-  library(dplyr)
+
 if(length(L)>1 & length(K)==1)
 {
 
