@@ -9,7 +9,7 @@
 library(dplyr)
 library(ggplot2)
 
-p_K<- function(df,col){
+P_K<- function(df,col){
   
   
   data=df

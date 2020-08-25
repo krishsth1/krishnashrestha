@@ -6,7 +6,7 @@
 
 
 
-p_L_M<-function(df,col="red"){
+P_L_M<-function(df,col="red"){
 library(ggplot2)
 library(patchwork)
 library(dplyr)

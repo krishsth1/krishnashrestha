@@ -6,7 +6,7 @@
 
 library(dplyr)
 
-l_K_table<-  function(L,A,K,unit_cost=4)
+L_K_table<-  function(L,A,K,unit_cost=4)
   {
 
 

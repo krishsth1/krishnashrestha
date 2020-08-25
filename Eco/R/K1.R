@@ -7,7 +7,7 @@
 library(dplyr)
 library(ggplot2)
 library(patchwork)
-p_L_M<-function(df,col="red"){
+P_K_M<-function(df,col="red"){
   data=df
   plot1<-ggplot(data) +
     aes(x = K, y = AP) +
