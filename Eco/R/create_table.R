@@ -6,7 +6,7 @@
 
 
 
-create_table<-  function(L,A,K,unit_cost)
+l_table<-  function(L,A,K,unit_cost=4)
   {
 
 
