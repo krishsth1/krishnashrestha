@@ -6,7 +6,7 @@
 df data frame
 col is colour to line plot}
 \usage{
-P_L(df, col)
+P_L(df, col = "red")
 }
 \description{
 it apply

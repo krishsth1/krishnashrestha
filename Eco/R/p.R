@@ -8,7 +8,7 @@
 
 
 
-P_L<- function(df,col){
+P_L<- function(df,col="red"){
 
 
   data=df
