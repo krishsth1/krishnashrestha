@@ -7,7 +7,7 @@ L vector of labour unit
 A
 K fixed capital}
 \usage{
-create_table(L, A, K)
+create_table(L, A, K, unit_cost)
 }
 \description{
 it apply

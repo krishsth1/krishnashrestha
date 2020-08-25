@@ -6,7 +6,7 @@
 
 
 
-create_table<-  function(L,A,K)
+create_table<-  function(L,A,K,unit_cost)
   {
 
 
@@ -20,7 +20,7 @@ create_table<-  function(L,A,K)
   data<- data %>% mutate(MP= c(0,diff(TP)))
   data<- data %>% mutate(LM=c(0,(diff(L)/2)+L[-length(L)]))
 
-  data <- data %>% mutate(TR=MP*4)
+  data <- data %>% mutate(TR=MP*unit_cost)
   data<- data %>% mutate(int=case_when(
     TR > 56~"Profit",
     round(TR,0) == 56 ~"Balance",
