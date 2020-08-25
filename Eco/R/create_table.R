@@ -11,7 +11,8 @@ create_table<-  function(L,A,K,unit_cost)
 
 
   library(dplyr)
-
+if(length(L)>1 & length(K)==1)
+{
 
   TP= A* sqrt(K) *sqrt(L)
 
@@ -30,5 +31,24 @@ create_table<-  function(L,A,K,unit_cost)
 
 
   return(table1)
+
+
+
+}
+
+else
+{
+
+
+  TP= A* sqrt(K) *sqrt(L)
+
+  data = data.frame(K,TP)
+  data <- data %>% mutate(AP= TP/K)
+  data<- data %>% mutate(MP= c(0,diff(TP)))
+  data<- data %>% mutate(LM=c(0,(diff(K)/2)+K[-length(K)]))
+  table2<-data %>% select(K,TP,MP,AP)
+  return(table2)
+}
+
 }
 
