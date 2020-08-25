@@ -9,6 +9,7 @@ library(ggplot2)
 library(patchwork)
 P_K_M<-function(df,col="red"){
   data=df
+  data<- data %>% mutate(LM=c(0,(diff(K)/2)+K[-length(K)]))
   plot1<-ggplot(data) +
     aes(x = K, y = AP) +
     geom_line(size = 0.64, colour =col) +
