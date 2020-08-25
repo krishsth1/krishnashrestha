@@ -12,7 +12,11 @@ library(patchwork)
 library(dplyr)  
 data<-df
 data<- data %>% mutate(LM=c(0,(diff(L)/2)+L[-length(L)]))
-
+data<- data %>% mutate(int=case_when(
+  TR > 56~"Profit",
+  round(TR,0) == 56 ~"Balance",
+  TRUE~"Loss"
+))
 plot2<-ggplot(data) +
   aes(x = L, y = AP) +
   geom_line(size = 0.64, colour = "#440154") +
